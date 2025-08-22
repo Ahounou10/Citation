@@ -1,0 +1,115 @@
+body {
+    background: linear-gradient(120deg, #e0e7ff 0%, #f8fafc 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.titre-centre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #6366f1 30%, transparent 70%);
+    opacity: 0.15;
+    z-index: 0;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    bottom: -120px;
+    right: -120px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, #4f46e5 40%, transparent 80%);
+    opacity: 0.12;
+    z-index: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(60, 72, 88, 0.18);
+    padding: 40px 32px;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    text-align: center;
+    color: #4f46e5;
+    margin-bottom: 32px;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-shadow: 0 2px 8px #eef2ff;
+}
+
+.citation {
+    background: linear-gradient(90deg, #eef2ff 80%, #e0e7ff 100%);
+    border-left: 8px solid #6366f1;
+    margin-bottom: 28px;
+    padding: 28px 32px 24px 48px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(99, 102, 241, 0.09);
+    position: relative;
+    transition: box-shadow 0.3s, transform 0.2s;
+    animation: fadeIn 2s;
+}
+
+.citation:hover {
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.18);
+    transform: translateY(-4px) scale(1.02);
+}
+
+.citation::before {
+    content: "❝";
+    font-size: 2.5em;
+    color: #6366f1;
+    position: absolute;
+    left: 16px;
+    top: 18px;
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+.texte {
+    font-size: 1.25em;
+    color: #374151;
+    margin: 0 0 14px 0;
+    font-style: italic;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+.auteur {
+    display: block;
+    text-align: right;
+    color: #6366f1;
+    font-weight: bold;
+    font-size: 1.05em;
+    letter-spacing: 1px;
+    margin-top: 8px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
